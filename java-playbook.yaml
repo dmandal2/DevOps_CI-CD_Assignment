@@ -1,0 +1,9 @@
+- name: Install Java
+  hosts: 10.0.2.82
+  gather_facts: true
+  become: true
+  tasks:
+    - name: Installing OpenJDK
+      apt:
+        name: default-jre
+        state: present
